@@ -1,0 +1,320 @@
+/* General */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: 18px;
+}
+
+/* Mise en page */
+
+html,
+body,
+nav, nav ul,
+h1,
+h3,
+p,
+.APropos,
+.SEP,
+.CP,
+.SEP ul,
+.CP-AP {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+/* Header / Footer */
+header,
+footer {
+  text-align: center;
+  height: 10vh;
+}
+
+header li a:hover,
+footer a:hover {
+  font-weight: 900;
+}
+
+header li a,
+footer a {
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+}
+
+/* Text */
+h1,
+h2,
+h3 {
+  font-family: "montserrat", sans-serif;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto 20px auto;
+}
+h3 {
+  font-size: 1.5rem;
+  margin: 10px auto 20px auto;
+}
+p,
+li {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Section */
+header,
+footer,
+.title,
+.APropos,
+.SEP,
+.CP,
+.carrousel {
+  box-shadow: 0px 0px 15px 4px #000000;
+}
+.APropos,
+.SEP,
+.CP,
+.carrousel {
+  width: 75%;
+  border-radius: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+header,
+.APropos,
+.CP,
+footer {
+  background-image: url(https://www.stockvault.net/data/2022/10/16/295127/preview16.jpg);
+}
+
+.title,
+.APropos,
+.SEP,
+.CP,
+.carrousel {
+  margin: 0 auto 5vh auto;
+  background-size: cover;
+  padding: 30px;
+}
+
+/* Header */
+header {
+  margin-bottom: 5vh;
+}
+
+nav {
+  display: flex;
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header li {
+  text-align: center;
+}
+
+/* Title */
+.title {
+  height: 83vh;
+  background-image: url(https://www.stockvault.net/data/2022/10/16/295117/preview16.jpg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-text {
+  height: calc(100% - 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title img {
+  margin: auto;
+  width: 150px;
+  border-radius: 20px;
+}
+h1 {
+  font-size: 5rem;
+}
+.title p {
+  font-size: 2.5rem;
+}
+span {
+  font-size: 1.5rem;
+  text-align: center;
+}
+h1,
+.title p {
+  text-align: center;
+}
+
+/* SEP */
+.SEP,
+.carrousel {
+  background-image: url(https://www.stockvault.net/data/2022/10/16/295115/preview16.jpg);
+}
+.SEP ul,
+.CP-AP {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 30px;
+}
+.SEP li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Compétences */
+.CP H3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.CP-A,
+.CP-ECA {
+  display: flex;
+  justify-content: space-around;
+}
+.CP li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.CP img {
+  width: 30px;
+}
+
+/* Carrousel */
+.carrousel{
+width: 78%;
+height: 83vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.carrouselMove {
+  background-image: url(./Images/slide/slide1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.carrouselArrow{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.carrousel input {
+  width: 50px;
+  background-color: white;
+}
+.carrousel h3,
+.carrousel p {
+  width: auto;
+text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+}
+.carrousel p{
+  font-size: 1.5rem;
+}
+.carrousel img {
+  width: 50%;
+  object-fit: cover;
+}
+.carrousel h3,.carrousel p {
+  margin-top: 20px;
+}
+#dots {
+  width: 100px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: white;
+}
+.dot {
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff00;
+  border: 3px solid black;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dot_selected {
+  background-color: black;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  align-items: center;
+}
+footer ul {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer img {
+  display: flex;
+  width: 1.5rem;
+}
+
+/* Small devices (phones, less than 1024px) */
+@media (max-width: 1024px) {
+  .title {
+    height: 70vh;
+  }
+
+  .SEP ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .CP-ECA,
+  .CP-AP {
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+  footer {
+    height: auto;
+  }
+}
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+
+}
