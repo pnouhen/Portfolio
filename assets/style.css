@@ -141,9 +141,10 @@ header li {
   margin: auto;
   width: 150px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .title p {
   font-size: 2.5rem;
@@ -273,16 +274,25 @@ footer img {
 
 /* Small devices (phones, less than 1024px) */
 @media (max-width: 1024px) {
-  .title {
-    height: 70vh;
-  }
-
+ .title-text{
+  height: 60%;
+ }
+.title img{
+  margin: auto;
+}
   .SEP ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  
+  #carrousel, #carrousel img{
+    height :auto;
+  }
+  #carrousel img{
+    width: 80%;
+        object-fit: contain;
+        
+  }
   footer {
     height: auto;
   }
