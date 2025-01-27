@@ -26,25 +26,6 @@ p,
   height: auto;
   width: 100%;
 }
-/* Header / Footer */
-header,
-footer {
-  text-align: center;
-  height: 10vh;
-}
-
-header li a:hover,
-footer a:hover {
-  font-weight: 900;
-}
-
-header li a,
-footer a {
-  font-size: 1em;
-  color: black;
-  text-decoration: none;
-}
-
 /* Text */
 h1,
 h2,
@@ -59,10 +40,10 @@ h2 {
 h3 {
   font-size: 1.5rem;
   margin: 10px auto 20px auto;
+  text-align: center;
 }
 p,
 li {
-  font-size: 1rem;
   text-align: justify;
 }
 
@@ -73,13 +54,13 @@ footer,
 .APropos,
 .SEP,
 .CP,
-.carrousel {
+#carrousel {
   box-shadow: 0px 0px 15px 4px #000000;
 }
 .APropos,
 .SEP,
 .CP,
-.carrousel {
+#carrousel {
   width: 75%;
   border-radius: 20px;
 }
@@ -98,11 +79,29 @@ footer {
 .APropos,
 .SEP,
 .CP,
-.carrousel {
+#carrousel {
   margin: 0 auto 5vh auto;
   background-size: cover;
   padding: 30px;
 }
+
+/* Header / Footer */
+header,
+footer {
+  height: 10vh;
+}
+
+header li a:hover,
+footer a:hover {
+  font-weight: 900;
+}
+
+header li a,
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
 
 /* Header */
 header {
@@ -130,7 +129,6 @@ header li {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .title-text {
@@ -138,7 +136,6 @@ header li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 .title img {
   margin: auto;
@@ -156,17 +153,16 @@ span {
   text-align: center;
 }
 h1,
-.title p {
+.title p, #carrousel p {
   text-align: center;
 }
 
 /* SEP */
 .SEP,
-.carrousel {
+#carrousel {
   background-image: url(https://www.stockvault.net/data/2022/10/16/295115/preview16.jpg);
 }
-.SEP ul,
-.CP-AP {
+.SEP ul {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   gap: 30px;
@@ -185,84 +181,65 @@ h1,
   align-items: center;
 }
 .CP-A,
-.CP-ECA {
+.CP-ECA
+ {
   display: flex;
   justify-content: space-around;
+}
+
+.CP-AP div{
+  display: flex;
+justify-content: space-around;
+
+}
+.CP-AP1{
+  margin-bottom: 30px;
 }
 .CP li {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
+  text-align: center;
 }
 .CP img {
   width: 30px;
 }
 
 /* Carrousel */
-.carrousel{
-width: 78%;
+#carrousel{
 height: 83vh;
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-
-.carrouselMove {
-  background-image: url(./Images/slide/slide1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
-.carrouselArrow{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.carrousel input {
-  width: 50px;
-  background-color: white;
-}
-.carrousel h3,
-.carrousel p {
+.carrouselMove{
   width: auto;
-text-align: center;
-  border-radius: 20px;
-  padding: 10px;
-  background-color: white;
-}
-.carrousel p{
-  font-size: 1.5rem;
-}
-.carrousel img {
-  width: 50%;
-  object-fit: cover;
-}
-.carrousel h3,.carrousel p {
-  margin-top: 20px;
-}
-#dots {
-  width: 100px;
-  margin: auto;
-  padding: 5px;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#carrousel p{
   margin-top: 10px;
-  background-color: white;
+}
+#carrousel input{
+  width: 20px;
+}
+#carrousel img{
+  width: auto;
+height: 50vh;
+}
+#dots {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
 }
 .dot {
   margin-inline: 5px;
   width: 13px;
   height: 13px;
-  background-color: #ffffff00;
   border: 3px solid black;
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -305,11 +282,7 @@ footer img {
     flex-direction: column;
     gap: 20px;
   }
-  .CP-ECA,
-  .CP-AP {
-    display: grid;
-    grid-template-columns: 45% 45%;
-  }
+  
   footer {
     height: auto;
   }

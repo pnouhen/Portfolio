@@ -22,18 +22,17 @@ const slides = [
 ];
  // Elements
   // Définir les éléments
-  const carrouselImage = document.querySelector('.carrouselMove')
+  const carrouselImage = document.querySelector('#carrousel img')
   const carrouselH3 = document.querySelector("#carrousel h3");
   const carrouselp = document.querySelector("#carrousel p");
   const dots = document.querySelectorAll(".dot");
   console.log(carrouselImage)
-
 // Définir l'index initial
 let index = 0;
 
 // Slide suivante
 function slide(index) {
-  carrouselImage.style.backgroundImage = `url(./Images/slide/${slides[index].image})`;
+  carrouselImage.src = `./assets/Images/slide/${slides[index].image}`;
   carrouselH3.innerHTML = slides[index].title;
   carrouselp.innerHTML = slides[index].text;
   for(let i = 0 ; i < slides.length; i++){
