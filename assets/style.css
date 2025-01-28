@@ -12,13 +12,11 @@
 
 html,
 body,
-nav, nav ul,
+nav,
+nav ul,
 h1,
 h3,
 p,
-.APropos,
-.SEP,
-.CP,
 .SEP ul,
 .CP-AP {
   margin: 0;
@@ -34,11 +32,11 @@ h3 {
 }
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
   margin: 0 auto 20px auto;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin: 10px auto 20px auto;
   text-align: center;
 }
@@ -51,16 +49,10 @@ li {
 header,
 footer,
 .title,
-.APropos,
-.SEP,
-.CP,
-#carrousel {
+section {
   box-shadow: 0px 0px 15px 4px #000000;
 }
-.APropos,
-.SEP,
-.CP,
-#carrousel {
+section {
   width: 75%;
   border-radius: 20px;
 }
@@ -101,7 +93,6 @@ footer a {
   color: black;
   text-decoration: none;
 }
-
 
 /* Header */
 header {
@@ -144,17 +135,18 @@ header li {
   margin-bottom: 20px;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4em;
 }
 .title p {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 span {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-align: center;
 }
 h1,
-.title p, #carrousel p {
+.title p,
+#carrousel p {
   text-align: center;
 }
 
@@ -163,7 +155,8 @@ h1,
 #carrousel {
   background-image: url(https://www.stockvault.net/data/2022/10/16/295115/preview16.jpg);
 }
-.SEP ul {
+
+.SEP ul,.CP-ECA, .CP-AP ul {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   gap: 30px;
@@ -181,22 +174,21 @@ h1,
   flex-direction: column;
   align-items: center;
 }
-.CP-A,
-.CP-ECA
- {
+.CP-A, .CP-ECA, .CP-AP ul{
+  padding:0;
+}
+.CP-A {
   display: flex;
   justify-content: space-around;
 }
 
 .CP-AP div{
   display: flex;
-justify-content: space-around;
+flex-direction: column;
+justify-content: center;
+}
 
-}
-.CP-AP1{
-  margin-bottom: 30px;
-}
-.CP li {
+.CP li, .CP-AP div p {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,30 +198,32 @@ justify-content: space-around;
 .CP img {
   width: 30px;
 }
+.CP-AP div img{
+margin: auto;
+}
 
 /* Carrousel */
-#carrousel{
-height: 83vh;
-display: flex;
-flex-direction: column;
-align-items: center;
+#carrousel {
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.carrouselMove{
-  width: auto;
+.carrouselMove {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-#carrousel p{
+#carrousel p {
   margin-top: 10px;
 }
-#carrousel input{
+#carrousel input {
   width: 20px;
 }
-#carrousel img{
+#carrousel img {
   width: auto;
-height: 50vh;
+  height: 50vh;
 }
 #dots {
   padding: 5px;
@@ -239,8 +233,8 @@ height: 50vh;
 }
 .dot {
   margin-inline: 5px;
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   border: 3px solid black;
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -251,7 +245,7 @@ height: 50vh;
 }
 
 /* Footer */
-footer{
+footer {
   display: flex;
   align-items: center;
 }
@@ -269,29 +263,29 @@ footer a {
 }
 footer img {
   display: flex;
-  width: 1.5rem;
+  width: 1.5em;
 }
 
 /* Small devices (phones, less than 1024px) */
 @media (max-width: 1024px) {
- .title-text{
-  height: 60%;
- }
-.title img{
-  margin: auto;
-}
+  .title-text {
+    height: 60%;
+  }
+  .title img {
+    margin: auto;
+  }
   .SEP ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  #carrousel, #carrousel img{
-    height :auto;
+  #carrousel,
+  #carrousel img {
+    height: auto;
   }
-  #carrousel img{
+  #carrousel img {
     width: 80%;
-        object-fit: contain;
-        
+    object-fit: contain;
   }
   footer {
     height: auto;
@@ -299,5 +293,60 @@ footer img {
 }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-
+  header {
+    height: auto;
+    padding: 20px;
+  }
+  .title {
+    height: auto;
+    gap: 20px;
+  }
+  header ul {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  }
+  
+  header ul li a {
+    font-size: 12px;
+  }
+  .title-text{
+    gap: 10px
+  }
+  .title img{
+    width: 100px;
+  }
+  h1{
+    font-size: 26px;
+  }
+  .title-text p{
+    font-size: 22px;
+  }
+  .title-text span{
+    font-size: 18px;
+  }
+  section, ul{
+    width: 100%;
+  }
+  h2{
+    font-size: 18px;
+  }
+  p, li{
+    font-size: 14px;
+  }
+h3{
+  font-size: 16px;
+}
+.CP-ECA{
+  display: flex;
+  justify-content: space-around;
+}
+.CP-AP ul{
+  gap: 10px;
+    justify-content: center;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+}
 }
